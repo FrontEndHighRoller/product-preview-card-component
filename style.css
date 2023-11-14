@@ -112,12 +112,6 @@ h2 {
   padding-right: 10px;
   height: 14px;
 }
-/*
-.button::before {
-  content: url("images/icon-cart.svg"); 
-  margin-right: 10px;
-}
- */
 
 .attribution {
   font-size: 11px;
@@ -129,21 +123,17 @@ h2 {
 }
 
 @media (min-width: 700px) {
-  main {
-    max-height: 100vh;
-  }
   .container {
-    flex-wrap: nowrap;
-    display: flex;
-    height: 400px;
-    width: 700px;
-    margin: 500px 250px;
+    margin: 0;
+    height: 365px; /* I played with height and width to get the container size I wanted*/
+    width: 520px; /* I played with height and width to get the container size I wanted*/
   }
 
   .image {
     flex: 1.2;
+    width: 100%; /* or any custom size */
     height: 100%;
-    width: 100%;
+    object-fit: contain;
   }
 
   .content {
@@ -153,6 +143,7 @@ h2 {
   .desktop {
     display: flex;
     border-radius: 8px 0 0 8px;
+    height: 100%;
   }
 
   .mobile {
