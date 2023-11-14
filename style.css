@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+/*colors */
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--cream);
+}
+
+.desktop {
+  display: none;
+}
+
+.container {
+  background-color: var(--white);
+  margin: 30px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.mobile {
+  border-radius: 10px 10px 0 0;
+}
+
+.parfume {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  font-size: 0.7rem;
+  letter-spacing: 5px; /* NEW FEATURE */
+}
+
+h1 {
+  font-family: Fraunces;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 30px; /* NEW FEATURE */
+}
+
+.paragraph {
+  color: var(--dark-grayish-blue);
+  font-size: 0.85rem;
+  line-height: 20px;
+}
+
+h2 {
+  color: var(--dark-cyan);
+  font-family: Fraunces;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.crossed-price {
+  color: var(--dark-grayish-blue);
+  font-size: 0.8rem;
+  padding-left: 15px;
+  text-decoration: line-through; /* NEW FEATURE */
+}
+
+.button {
+  background-color: var(--dark-cyan);
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  width: 100%; /* This will spread over the content width up to padding*/
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon {
+  content: url(images/icon-cart.svg);
+  padding-right: 10px;
+  height: 14px;
+}
+/*
+.button::before {
+  content: url("images/icon-cart.svg"); 
+  margin-right: 10px;
+}
+ */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 700px) {
+  main {
+    max-height: 100vh;
+  }
+  .container {
+    flex-wrap: nowrap;
+    display: flex;
+    height: 400px;
+    width: 700px;
+    margin: 500px 250px;
+  }
+
+  .image {
+    flex: 1.2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .desktop {
+    display: flex;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
