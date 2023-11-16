@@ -20,56 +20,51 @@
     <title>Frontend Mentor | Product preview card component</title>
   </head>
   <body>
-    <main>
-      <section class="container">
-        <div class="image">
-          <!-- <img
-            class="mobile"
-            src="images/image-product-mobile.jpg"
-            alt="product parfume mobile"
+    <main class="container">
+      <div class="image">
+        <picture>
+          <source
+            media="(min-width:700px)"
+            srcset="images/image-product-desktop.jpg"
           />
           <img
-            class="desktop"
-            src="images/image-product-desktop.jpg"
-            alt="product parfume desktop"
-          /> -->
-
-          <picture>
-            <source
-              media="(min-width:43.75rem)"
-              srcset="images/image-product-desktop.jpg"
-            />
-            <img
-              class="img"
-              src="images/image-product-mobile.jpg"
-              alt="Gabrielle Essence Eau De Parfum"
-              style="width: auto"
-            />
-          </picture>
-        </div>
-        <div class="content">
+            class="img"
+            src="images/image-product-mobile.jpg"
+            alt="Gabrielle Essence Eau De Parfum"
+            style="width: auto"
+          />
+        </picture>
+      </div>
+      <div class="content">
+        <hgroup>
           <p class="parfume">Perfume</p>
           <h1 class="h1">Gabrielle Essence Eau De Parfum</h1>
-          <p class="paragraph">
-            A floral, solar and voluptuous interpretation composed by Olivier
-            Polge, Perfumer-Creator for the House of CHANEL.
-          </p>
-          <div class="price">
-            <h2 class="h2">
-              $149.99 <span class="crossed-price"> $169.99</span>
-            </h2>
-          </div>
-          <button class="button">
-            <span class="cart-icon"></span>Add to Cart
-          </button>
+        </hgroup>
+
+        <p class="paragraph">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+
+        <div class="price">
+          <h2 class="h2">
+            <!-- HIDDEN TEXT, SCREEN READERS ONLY -->
+            $149.99 <span class="sr-only">Old price</span>
+            <s class="crossed-price"> $169.99</s>
+          </h2>
         </div>
-      </section>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Dennis Rumanek</a>.
+
+        <button class="button">
+          <span class="cart-icon"></span>Add to Cart
+        </button>
       </div>
     </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Dennis Rumanek</a>.
+    </div> -->
   </body>
 </html>
