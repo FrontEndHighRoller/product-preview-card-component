@@ -35,10 +35,10 @@ body {
 }
 
 .container {
+  display: flex;
   background-color: var(--white);
   margin: 30px 20px;
   border-radius: 10px;
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -49,7 +49,7 @@ body {
   row-gap: 1rem;
 }
 
-img {
+.img {
   border-radius: 10px 10px 0 0;
 }
 
@@ -58,20 +58,21 @@ img {
   text-transform: uppercase;
   color: var(--dark-grayish-blue);
   font-size: 0.7rem;
-  letter-spacing: 0.31rem; /* NEW FEATURE */
+  letter-spacing: 0.31rem;
+  margin-bottom: 1rem;
 }
 
 .h1 {
   font-family: Fraunces;
   font-size: 1.8rem;
   font-weight: 700;
-  line-height: 1; /* NEW FEATURE */
+  line-height: 1;
 }
 
 .paragraph {
   color: var(--dark-grayish-blue);
   font-size: 0.85rem; /* always rem not pixels*/
-  line-height: 1.5; /* should be unitless*/
+  line-height: 1.5; /* line height should be unitless*/
 }
 
 .h2 {
@@ -86,7 +87,16 @@ img {
 .crossed-price {
   color: var(--dark-grayish-blue);
   font-size: 0.8rem;
-  text-decoration: line-through; /* NEW FEATURE */
+}
+
+/* HIDDEN TEXT, SCREEN READERS ONLY*/
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .button {
@@ -115,27 +125,24 @@ img {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  width: 100%;
 }
 
 @media (min-width: 43.75rem) {
   .container {
-    min-height: 390px; /* I played with height and width to get the container size I wanted */
-    min-width: 520px; /* I played with height and width to get the container size I wanted */
+    max-width: 32.5rem; /* Helps to to access */
     flex-wrap: nowrap;
-    margin: 6.25rem 32.5rem !important;
   }
 
   .image {
-    flex: 0 0 50%;
+    flex: 1 1 50%;
   }
 
   .content {
-    flex: 0 0 50%;
+    flex: 1 1 50%;
   }
 
   .img {
-    width: 100%; /* Make the image take up 100% of the width of its container */
-    height: 100%;
     border-radius: 8px 0 0 8px;
     object-fit: cover;
   }
