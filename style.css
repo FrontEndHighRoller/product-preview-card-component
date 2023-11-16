@@ -122,7 +122,7 @@ img {
     min-height: 390px; /* I played with height and width to get the container size I wanted */
     min-width: 520px; /* I played with height and width to get the container size I wanted */
     flex-wrap: nowrap;
-    margin: 100px 520px !important;
+    margin: 6.25rem 32.5rem !important;
   }
 
   .image {
