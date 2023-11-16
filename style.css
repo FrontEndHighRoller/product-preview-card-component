@@ -1,21 +1,19 @@
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
   font-size: 1rem;
 }
 
-img {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture {
   max-width: 100%;
-  object-fit: cover;
-  height: auto;
+  display: block;
 }
 
 /*colors */
@@ -26,6 +24,7 @@ img {
   --dark-grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
 }
+/*colors */
 
 body {
   display: flex;
@@ -33,10 +32,6 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: var(--cream);
-}
-
-.desktop {
-  display: none;
 }
 
 .container {
@@ -54,7 +49,7 @@ body {
   row-gap: 1rem;
 }
 
-.mobile {
+img {
   border-radius: 10px 10px 0 0;
 }
 
@@ -63,34 +58,34 @@ body {
   text-transform: uppercase;
   color: var(--dark-grayish-blue);
   font-size: 0.7rem;
-  letter-spacing: 5px; /* NEW FEATURE */
+  letter-spacing: 0.31rem; /* NEW FEATURE */
 }
 
-h1 {
+.h1 {
   font-family: Fraunces;
   font-size: 1.8rem;
   font-weight: 700;
-  line-height: 30px; /* NEW FEATURE */
+  line-height: 1; /* NEW FEATURE */
 }
 
 .paragraph {
   color: var(--dark-grayish-blue);
-  font-size: 0.85rem;
-  line-height: 20px;
+  font-size: 0.85rem; /* always rem not pixels*/
+  line-height: 1.5; /* should be unitless*/
 }
 
-h2 {
+.h2 {
   color: var(--dark-cyan);
   font-family: Fraunces;
   font-size: 1.8rem;
   display: flex;
   align-items: center;
+  column-gap: 1rem;
 }
 
 .crossed-price {
   color: var(--dark-grayish-blue);
   font-size: 0.8rem;
-  padding-left: 15px;
   text-decoration: line-through; /* NEW FEATURE */
 }
 
@@ -105,16 +100,16 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 0.31rem;
 }
 
 .cart-icon {
   content: url(images/icon-cart.svg);
-  padding-right: 10px;
-  height: 14px;
+  height: 0.87rem;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6rem;
   text-align: center;
 }
 
@@ -122,31 +117,26 @@ h2 {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 43.75rem) {
   .container {
-    margin: 0;
-    height: 365px; /* I played with height and width to get the container size I wanted*/
-    width: 520px; /* I played with height and width to get the container size I wanted*/
+    min-height: 390px; /* I played with height and width to get the container size I wanted */
+    min-width: 520px; /* I played with height and width to get the container size I wanted */
+    flex-wrap: nowrap;
+    margin: 100px 520px !important;
   }
 
   .image {
-    flex: 1.2;
-    width: 100%; /* or any custom size */
-    height: 100%;
-    object-fit: contain;
+    flex: 0 0 50%;
   }
 
   .content {
-    flex: 1;
+    flex: 0 0 50%;
   }
 
-  .desktop {
-    display: flex;
-    border-radius: 8px 0 0 8px;
+  .img {
+    width: 100%; /* Make the image take up 100% of the width of its container */
     height: 100%;
-  }
-
-  .mobile {
-    display: none;
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
   }
 }
