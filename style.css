@@ -37,8 +37,8 @@ body {
 .container {
   display: flex;
   background-color: var(--white);
-  margin: 30px 20px;
-  border-radius: 10px;
+  margin: 1.87rem 1.25rem;
+  border-radius: 0.6rem;
   flex-wrap: wrap;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .img {
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.6rem 0.6rem 0 0;
 }
 
 .parfume {
@@ -94,8 +94,8 @@ body {
   position: absolute;
   left: -10000px;
   top: auto;
-  width: 1px;
-  height: 1px;
+  width: 0.06rem;
+  height: 0.06rem;
   overflow: hidden;
 }
 
@@ -103,10 +103,10 @@ body {
   background-color: var(--dark-cyan);
   text-decoration: none;
   color: white;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: none;
   width: 100%; /* This will spread over the content width up to padding*/
-  padding: 10px;
+  padding: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,6 +128,13 @@ body {
   width: 100%;
 }
 
+/*active states*/
+
+.button:hover {
+  background-color: hsl(158deg 21.11% 25.64%);
+  cursor: pointer;
+}
+
 @media (min-width: 43.75rem) {
   .container {
     max-width: 32.5rem; /* Helps to to access */
@@ -143,7 +150,7 @@ body {
   }
 
   .img {
-    border-radius: 8px 0 0 8px;
+    border-radius: 0.5rem 0 0 0.5rem;
     object-fit: cover;
   }
 }
